@@ -1,0 +1,4 @@
+#!/bin/sh
+# 每次 commit 後自動推送到 GitHub（由 npm install 的 prepare 腳本啟用）
+git remote get-url origin >/dev/null 2>&1 || exit 0
+git push --quiet -u origin HEAD || echo "⚠️  自動推送失敗，請檢查網路或 GitHub 登入狀態（gh auth status）"

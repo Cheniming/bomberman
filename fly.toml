@@ -1,0 +1,13 @@
+# 伺服器部署設定（Fly.io）。app 名稱需全球唯一，第一次部署前請改掉。
+app = "bomberman-change-me"
+primary_region = "nrt" # 東京，台灣連線延遲低
+
+[build]
+  dockerfile = "server/Dockerfile"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>炸彈超人</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div id="menu" class="panel">
+      <h1>💣 炸彈超人</h1>
+      <label>名字 <input id="name" maxlength="12" placeholder="你的名字" /></label>
+      <button id="btn-local">本機雙人</button>
+      <button id="btn-quick">線上快速配對</button>
+      <button id="btn-create">建立私人房間</button>
+      <div class="row">
+        <input id="code" placeholder="房間代碼" />
+        <button id="btn-join">加入</button>
+      </div>
+      <p id="menu-msg" class="msg"></p>
+      <p class="help">
+        本機：P1 <kbd>WASD</kbd> + <kbd>空白鍵</kbd>　P2 <kbd>方向鍵</kbd> + <kbd>Enter</kbd><br />
+        線上：<kbd>WASD</kbd> / <kbd>方向鍵</kbd> + <kbd>空白鍵</kbd>　<kbd>Esc</kbd> 回選單
+      </p>
+      <p class="version" id="version"></p>
+    </div>
+    <div id="play" hidden>
+      <div id="hud"></div>
+      <div id="game"></div>
+      <div id="banner"></div>
+    </div>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
