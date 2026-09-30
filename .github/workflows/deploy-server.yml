@@ -15,7 +15,7 @@ jobs:
       - if: env.FLY_API_TOKEN == ''
         run: echo "::notice::尚未設定 FLY_API_TOKEN，略過伺服器部署"
       - if: env.FLY_API_TOKEN != ''
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - if: env.FLY_API_TOKEN != ''
         uses: superfly/flyctl-actions/setup-flyctl@master
       - if: env.FLY_API_TOKEN != ''
